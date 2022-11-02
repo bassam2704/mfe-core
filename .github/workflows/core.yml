@@ -5,9 +5,7 @@ on:
       - main
     paths:
       - '**'
-defaults:
-  run:
-    working-directory: ''
+
 
 jobs:
   build:
