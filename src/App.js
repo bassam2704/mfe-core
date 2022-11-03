@@ -1,15 +1,19 @@
 import React from 'react'
 // import {mount} from 'marketing/MarkertingApp' // mount is a simple function that give reference to the html element
 
-// console.log(mount)
+// console.log(mount)\
+import { BrowserRouter } from 'react-router-dom'
+import Header from './components/Header'
 import MarketingApp from './components/MarketingApp'
 function App() {
   return (
-    <div>
-      <h1>HI THERE</h1>
-      <MarketingApp/>
-      <MarketingApp/>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Header/>
+        <MarketingApp/>
+      </div>
+    </BrowserRouter>
+   
   )
 }
 
