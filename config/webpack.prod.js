@@ -13,7 +13,8 @@ const prodConfig={
         new ModuleFederationPlugin({
             name:'container', //used as global variable when scripts loads
             remotes:{
-                marketing:`marketing@${domain}/marketing/latest/remoteEntry.js`
+                marketing:`marketing@${domain}/marketing/latest/remoteEntry.js`,
+                auth:`auth@${domain}/auth/latest/remoteEntry.js`
             },
            shared:packageJson.dependencies
         }),
