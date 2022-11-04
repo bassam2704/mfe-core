@@ -6,11 +6,7 @@ import App from './App'
 
 
 
-ReactDOM.render(
-    <App/>,
-    document.querySelector('#root')
- )
-
+ReactDOM.render(<App />, document.querySelector('#root'));
 
 /*our container doesn't need a malfunction whenever the container application is going
 

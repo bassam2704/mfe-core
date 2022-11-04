@@ -1,9 +1,10 @@
-import {mount} from 'marketing/MarkertingApp' // mount is a simple function that give reference to the html element
+import {mount} from 'auth/AuthApp' // mount is a simple function that give reference to the html element
 import React,{useRef,useEffect}  from 'react'
 import { useHistory } from 'react-router-dom'
-export default()=>{
+export default({onSignIn})=>{
     const ref=useRef(null)
     const history=useHistory()
+ 
     useEffect(()=>{
        const {onParentNavigate}= mount(ref.current,{
             onNavigate:({pathname:nextPathname})=>{
@@ -14,7 +15,10 @@ export default()=>{
                 }
         
             },
-            initialPath:history.location.pathname
+            initialPath:history.location.pathname,
+          
+                onSignIn
+           
         })
         history.listen(onParentNavigate)
     },[])
